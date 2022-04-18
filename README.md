@@ -216,7 +216,7 @@ If you return `null` or `undefined` from the file function, the values for the c
 This example will use the collection `'photos'` only for incoming files whose reported mime-type is `image/jpeg`, the others will be stored using default values.
 
 ```javascript
-const {GridFsStorage} = require('multer-gridfs-storage');
+const {GridFsStorage} = require('multer-gridfs-storage').GridFsStorage;
 
 const storage = new GridFsStorage({
   url: 'mongodb://host:27017/database',
@@ -236,7 +236,7 @@ const upload = multer({ storage });
 This other example names every file something like `'file_1504287812377'`, using the date to change the number and to generate unique values
 
 ```javascript
-const {GridFsStorage} = require('multer-gridfs-storage');
+const {GridFsStorage} = require('multer-gridfs-storage').GridFsStorage;
 
 const storage = new GridFsStorage({
   url: 'mongodb://host:27017/database',
